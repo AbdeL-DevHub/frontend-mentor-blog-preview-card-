@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900; /* the range this file supports */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/Figtree-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+body {
+    background-color: hsl(47, 88%, 63%);
+    font-family: Figtree, sans-serif;
+}
+
+.card-container {
+    width: 30%;
+    height:50%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 190px auto;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 5px 5px 1px 1px black;
+}
+
+.card-container > h1:is(:hover, :focus) {
+    color: hsl(47, 88%, 63%);
+}
+.card-container > h1{
+    white-space:wrap;
+}
+.hero-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+button{
+    background-color:hsl(47, 88%, 63%);
+    color: black;
+    padding: 6px;
+    border: none;
+    border-radius: 3px;
+    font-family: Figtree;
+    font-weight: bold;
+}
+
+:is(.btn):is(:hover,:focus){
+    outline: 1px solid red;
+}
+
+.card-container > p:nth-of-type(2){
+    color: gray;
+}
+
+.author-image {
+    width: 30px;
+}
+
+
+.author-image,
+.author-name {
+  display: inline-block;
+  vertical-align: middle; /* Aligns their centers to each other */
+}
+
+.author-name {
+    font-weight: bold;
+}
